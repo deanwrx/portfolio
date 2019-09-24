@@ -29,6 +29,14 @@ $background-opacity: 0.9;
   }
 }
 
+//text color function
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
 //MEDIA QUERY MIXINS
 
 //applied if 500px or less
